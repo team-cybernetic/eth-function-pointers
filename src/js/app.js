@@ -32,6 +32,7 @@ App = {
             App.getAdd();
             App.getNum();
             App.getFactor();
+            App.getAddress();
 
         }).then(function() {
             var functionsInstance;
@@ -43,6 +44,8 @@ App = {
                 App.contracts.FunctionPointers.deployed().then(function(instance) {
                     functionsInstance = instance;
 
+                    $('#address-main').html(functionsInstance.address.toString());
+
                     functionsInstance.Swapped({}, {fromBlock: lastblock, toBlock: 'latest'}).watch(function(error, response) {
                         console.log("swapped error = " + JSON.stringify(error));
                         console.log("swapped response = " + JSON.stringify(response));
@@ -51,6 +54,7 @@ App = {
                         }
                         App.getAdd();
                         App.getFactor();
+                        App.getAddress();
                     });
 
                     functionsInstance.Calculated({}, {fromBlock: lastblock, toBlock: 'latest'}).watch(function(error, response) {
@@ -251,6 +255,23 @@ App = {
             $('#factor').html(factor.toString());
 		}).catch(function(err) {
 			console.log("Error while getting factor: " + err.message);
+		});
+
+    },
+
+    getAddress: function() {
+		var functionsInstance;
+
+		App.contracts.FunctionPointers.deployed().then(function(instance) {
+			functionsInstance = instance;
+
+            console.log('asking for address');
+			return functionsInstance.getFunctionAddress.call();
+		}).then(function(address) {
+            console.log('got address: ' + address.toString());
+            $('#address-calc').html(address.toString());
+		}).catch(function(err) {
+			console.log("Error while getting address: " + err.message);
 		});
 
     }

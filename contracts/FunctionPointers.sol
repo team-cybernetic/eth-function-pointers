@@ -54,4 +54,8 @@ contract FunctionPointers {
         callback.setFactor(newFactor);
         FactorSet(msg.sender, newFactor);
     }
+
+    function getFunctionAddress() returns (address) {
+        return (callback);
+    }
 }
