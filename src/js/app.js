@@ -90,8 +90,8 @@ App = {
         $(document).on('click', '#btn-factor', App.setFactor);
     },
 
-    calc: function() {
-        event.preventDefault();
+    calc: function(e) {
+        App.stopEvent(e);
         console.log('calc');
 
         var $numbox = $('#txt-num');
@@ -133,8 +133,8 @@ App = {
 
     },
 
-    swap: function() {
-        event.preventDefault();
+    swap: function(e) {
+        App.stopEvent(e);
 
         var $swapbtn = $('#btn-swap');
         $swapbtn.attr('disabled', true);
@@ -164,9 +164,8 @@ App = {
 		});
     },
 
-    setFactor: function() {
-        event.preventDefault();
-        console.log('factor');
+    setFactor: function(e) {
+        App.stopEvent(e);
 
         var $factorbox = $('#txt-factor');
         var num = parseInt($factorbox.val(), 10);
@@ -274,7 +273,19 @@ App = {
 			console.log("Error while getting address: " + err.message);
 		});
 
-    }
+    },
+
+    stopEvent: function(e) {
+        //from https://stackoverflow.com/questions/4585970/jquery-event-preventdefault-not-working-in-firefox-jsfiddle-included
+        if(e.preventDefault) {
+            e.preventDefault();
+        } else{
+            e.stop();
+        };
+
+        e.returnValue = false;
+        e.stopPropagation();        
+    } 
 };
 
 
