@@ -1,0 +1,221 @@
+{
+  "contract_name": "FunctionPointers",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_num",
+          "type": "uint256"
+        }
+      ],
+      "name": "doIt",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "swapIt",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getFactor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFactor",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getAdd",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_adder",
+          "type": "address"
+        },
+        {
+          "name": "_multiplier",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "Swapped",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "numIn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "added",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "numOut",
+          "type": "uint256"
+        }
+      ],
+      "name": "Calculated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "FactorSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526000805460ff19166001908117825555341561001f57600080fd5b60405160408061048c83398101604052808051919060200180519150505b60028054600160a060020a03808516600160a060020a03199283161792839055600380548583169084161790556004805490921692169190911790555b50505b6104008061008c6000396000f3006060604052361561005c5763ffffffff60e060020a6000350416630ed1ecb181146100615780631b057db3146100895780635184cc431461009e57806367e0badb146100c3578063817e9d31146100e8578063d14d42ba14610100575b600080fd5b341561006c57600080fd5b610077600435610127565b60405190815260200160405180910390f35b341561009457600080fd5b61009c610202565b005b34156100a957600080fd5b6100776102bc565b60405190815260200160405180910390f35b34156100ce57600080fd5b610077610326565b60405190815260200160405180910390f35b34156100f357600080fd5b61009c60043561032d565b005b341561010b57600080fd5b6101136103ca565b604051901515815260200160405180910390f35b600454600090600160a060020a03166338c9027a83836040516020015260405160e060020a63ffffffff84160281526004810191909152602401602060405180830381600087803b151561017a57600080fd5b6102c65a03f1151561018b57600080fd5b50505060405180516001805490910190819055600054600160a060020a03331692507f56f6ab423ff66a0a04dd2f3b1e191a30cde74977644e28216d16bad457fd37ca91859160ff169060405192835290151560208301526040808301919091526060909101905180910390a2506001545b919050565b60005460ff1615610241576003546004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03909216919091179055610271565b6002546004805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039092169190911790555b6000805460ff19811660ff90911615179055600160a060020a0333167f9f9d8176388b18cf78a5d05972aa3601b5e5a8a6c6f5e62caa7f537a9663ef9a60405160405180910390a25b565b600454600090600160a060020a0316635184cc4382604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561030657600080fd5b6102c65a03f1151561031757600080fd5b50505060405180519150505b90565b6001545b90565b600454600160a060020a031663817e9d318260405160e060020a63ffffffff84160281526004810191909152602401600060405180830381600087803b151561037557600080fd5b6102c65a03f1151561038657600080fd5b50505033600160a060020a03167f2e6a999e6a979fc67be9e944428a8bb2fd26aeff92ed96422dd0baf8397f12c08260405190815260200160405180910390a25b50565b60005460ff165b905600a165627a7a72305820bc90af68cfa2694de796df8f3207a82ed2e4f205121aa33dba729f244ac751a40029",
+  "networks": {
+    "1504670019360": {
+      "events": {
+        "0x9f9d8176388b18cf78a5d05972aa3601b5e5a8a6c6f5e62caa7f537a9663ef9a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            }
+          ],
+          "name": "Swapped",
+          "type": "event"
+        },
+        "0x56f6ab423ff66a0a04dd2f3b1e191a30cde74977644e28216d16bad457fd37ca": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "numIn",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "added",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "numOut",
+              "type": "uint256"
+            }
+          ],
+          "name": "Calculated",
+          "type": "event"
+        },
+        "0x2e6a999e6a979fc67be9e944428a8bb2fd26aeff92ed96422dd0baf8397f12c0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "newFactor",
+              "type": "uint256"
+            }
+          ],
+          "name": "FactorSet",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xc4abc7c9748b4c0afbc2496d47d40bdd99013ad5",
+      "updated_at": 1504841856779
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1504843083626
+}

@@ -1,0 +1,95 @@
+{
+  "contract_name": "Multiplier",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "calc",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getFactor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFactor",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newFactor",
+          "type": "uint256"
+        }
+      ],
+      "name": "FactorSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526002600055341561001457600080fd5b5b610149806100246000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166338c9027a81146100535780635184cc431461007b578063817e9d31146100a0575b600080fd5b341561005e57600080fd5b6100696004356100b8565b60405190815260200160405180910390f35b341561008657600080fd5b6100696100c3565b60405190815260200160405180910390f35b34156100ab57600080fd5b6100b66004356100ca565b005b60005481025b919050565b6000545b90565b600081905573ffffffffffffffffffffffffffffffffffffffff33167f2e6a999e6a979fc67be9e944428a8bb2fd26aeff92ed96422dd0baf8397f12c08260405190815260200160405180910390a25b505600a165627a7a72305820ffd6926c9db036aacbcbcec58df9d494c5cb2f7c126cc942ecb73b8564f00f300029",
+  "networks": {
+    "1504670019360": {
+      "events": {
+        "0x2e6a999e6a979fc67be9e944428a8bb2fd26aeff92ed96422dd0baf8397f12c0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "newFactor",
+              "type": "uint256"
+            }
+          ],
+          "name": "FactorSet",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5d308608c53d3ccce10906240d831073a63a6931",
+      "updated_at": 1504841856790
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1504843083626
+}
