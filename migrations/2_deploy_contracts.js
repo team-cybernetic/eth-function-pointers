@@ -6,6 +6,7 @@ module.exports = function(deployer) {
     deployer.deploy([
         Adder,
         Multiplier,
-        [FunctionPointers, Adder.address, Multiplier.address]
-    ]);
+    ]).then(() => {
+        deployer.deploy(FunctionPointers, Adder.address, Multiplier.address);
+    });
 };
